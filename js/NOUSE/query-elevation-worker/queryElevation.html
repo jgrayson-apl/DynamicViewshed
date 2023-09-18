@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>MapView</title>
+
+    <link rel="stylesheet" href="//js.arcgis.com/4.5/esri/css/main.css">
+
+    <style>
+      html,
+      body {
+        padding : 0;
+        margin  : 0;
+        width   : 100%;
+        height  : 100%;
+      }
+
+      #viewDiv {
+        width  : 100%;
+        height : 100%;
+      }
+    </style>
+
+    <script>
+      var dojoConfig = {
+        async: true,
+        isDebug: false
+      };
+    </script>
+
+    <script src="//js.arcgis.com/4.5/"></script>
+
+    <script>
+      require([
+        "esri/config",
+        "esri/core/workers",
+        "esri/layers/ElevationLayer",
+        "esri/geometry/Multipoint",
+        "dojo/domReady!"
+      ], function (config, workers, ElevationLayer, Multipoint) {
+
+        config.workers.loaderConfig = {
+          paths: {
+            workerScripts: window.location.href.replace(/\/[^/]+$/, "/workerScripts")
+          }
+        };
+
+        var API = {
+          queryElevation(params) {
+            var layer = new ElevationLayer("https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer");
+            return layer.load().then(function () {
+              return layer.queryElevation(new Multipoint(params.points), { returnSampleInfo: true });
+            }).then(function (result) {
+              return { data: JSON.stringify(result) };
+            })
+          }
+        }
+
+        var connection;
+
+        workers.open(API, "workerScripts/QueryElevationWorker").then(function (conn) {
+          console.log("connected");
+          connection = conn;
+          return connection.invoke("execute");
+        }).then(function (result) {
+          document.body.innerHTML += "<h1>On Worker</h1><br />";
+          document.body.innerHTML += result.join("<br />");
+          document.body.innerHTML += "<hr />";
+        }).then(function () {
+          return connection.invoke("executeOnMainThread");
+        }).then(function (result) {
+          document.body.innerHTML += "<h1>On Main Thread</h1><br />";
+          document.body.innerHTML += result.join("<br />");
+          document.body.innerHTML += "<hr />";
+        });
+
+      });
+    </script>
+  </head>
+
+  <body></body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "appid": "",
+  "group": "",
+  "title": "Dynamic Viewshed",
+  "webmap": "",
+  "webscene": "74fcc96b670d4a78b95653f3459cf3f4",
+  "portalUrl": "https://www.arcgis.com",
+  "oauthappid": "A1U8mEUlJZaVUug5",
+  "proxyUrl": null,
+  "units": "dual",
+  "helperServices": {
+    "geometry": {
+      "url": null
+    },
+    "printTask": {
+      "url": null
+    },
+    "elevationSync": {
+      "url": null
+    },
+    "geocode": [{
+      "url": null
+    }]
+  }
+}

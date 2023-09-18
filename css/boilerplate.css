@@ -1,0 +1,280 @@
+html {
+  height                   : 100%;
+  font-size                : 100%;
+  -webkit-text-size-adjust : 100%;
+  -moz-text-size-adjust    : 100%;
+  -ms-text-size-adjust     : 100%;
+}
+
+body {
+  min-height : 100%;
+  margin     : 0;
+}
+
+body * {
+  outline : none;
+}
+
+#viewDiv {
+  height     : calc(100vh - 100px) !important;
+  margin     : 0;
+  padding    : 0;
+  box-shadow : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#user-thumb-node {
+  height         : 36px;
+  border-radius  : 18px;
+  vertical-align : middle;
+}
+
+#legend-node {
+  padding : 10px;
+}
+
+.esri-search__input {
+  height : 32px !important;
+}
+
+.esri-layer-list {
+  background-color : #fff;
+  width            : unset;
+  max-height       : unset;
+}
+
+.esri-layer-list li {
+  margin : 3px !important;
+}
+
+.esri-layer-list__item-action {
+  /*margin : 3px !important;*/
+  /*vertical-align : middle !important;*/
+}
+
+.esri-layer-list__item-action-icon {
+  height         : 100%;
+  vertical-align : middle !important;
+}
+
+.esri-print__container {
+  max-height : unset;
+}
+
+/* =========================================================== */
+
+.toggle-pane-node {
+  cursor     : pointer;
+  padding    : 8px;
+  background : #fff;
+  box-shadow : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-pane-node:hover {
+  color : #0079c1;
+}
+
+/* =========================================================== */
+
+#places-node {
+  height   : calc(100vh - 200px);
+  overflow : auto;
+}
+
+.places-node {
+  cursor     : pointer;
+  margin     : 5px;
+  padding    : 10px;
+  text-align : center;
+  border     : solid 1px transparent;
+}
+
+.places-node:hover {
+  border-color : #999;
+}
+
+.places-node:active {
+  color        : #0079c1;
+  border-color : #0079c1;
+}
+
+.places-node.selected {
+  color        : #0079c1;
+  background   : #d2e9f9;
+  border-color : #0079c1;
+}
+
+.places-thumbnail {
+  box-shadow : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================== */
+
+.input-group-button input[type=number] {
+  margin-top     : 0;
+  vertical-align : top !important;
+  width          : 80px !important;
+}
+
+input[type=range] {
+  -webkit-appearance : none;
+  width              : 100%;
+  margin             : 0;
+  background         : none;
+  border             : none;
+  box-shadow         : none;
+}
+
+input[type=range]:focus {
+  outline : none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width         : 100%;
+  height        : 7px;
+  cursor        : pointer;
+  box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background    : #0079c1;
+  border-radius : 1px;
+  border        : 1px solid rgba(0, 121, 193, 0.5);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow         : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border             : 1px solid #0079c1;
+  height             : 24px;
+  width              : 11px;
+  border-radius      : 3px;
+  background         : #ffffff;
+  cursor             : pointer;
+  -webkit-appearance : none;
+  margin-top         : -9.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background : #0089db;
+}
+
+input[type=range]::-moz-range-track {
+  width         : 100%;
+  height        : 7px;
+  cursor        : pointer;
+  box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background    : #0079c1;
+  border-radius : 1px;
+  border        : 1px solid rgba(0, 121, 193, 0.5);
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border        : 1px solid #0079c1;
+  height        : 24px;
+  width         : 11px;
+  border-radius : 3px;
+  background    : #ffffff;
+  cursor        : pointer;
+}
+
+input[type=range]::-ms-track {
+  width        : 100%;
+  height       : 7px;
+  cursor       : pointer;
+  background   : transparent;
+  border-color : transparent;
+  color        : transparent;
+}
+
+input[type=range]:focus {
+  outline : none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width         : 100%;
+  height        : 7px;
+  cursor        : pointer;
+  box-shadow    : 1px 1px 1px rgba(25, 86, 123, 0.95), 0px 0px 1px rgba(29, 101, 144, 0.95);
+  background    : #0079c1;
+  border-radius : 1px;
+  border        : 1px solid rgba(0, 121, 193, 0.5);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow         : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border             : 1px solid #0079c1;
+  height             : 24px;
+  width              : 12px;
+  border-radius      : 3px;
+  background         : #ffffff;
+  cursor             : pointer;
+  -webkit-appearance : none;
+  margin-top         : -9.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background : #0089db;
+}
+
+input[type=range]::-moz-range-track {
+  width         : 100%;
+  height        : 7px;
+  cursor        : pointer;
+  box-shadow    : 1px 1px 1px rgba(25, 86, 123, 0.95), 0px 0px 1px rgba(29, 101, 144, 0.95);
+  background    : #0079c1;
+  border-radius : 1px;
+  border        : 1px solid rgba(0, 121, 193, 0.5);
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border        : 1px solid #0079c1;
+  height        : 24px;
+  width         : 12px;
+  border-radius : 3px;
+  background    : #ffffff;
+  cursor        : pointer;
+}
+
+input[type=range]::-ms-track {
+  width        : 100%;
+  height       : 7px;
+  cursor       : pointer;
+  background   : transparent;
+  border-color : transparent;
+  color        : transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background    : #0069a8;
+  border        : 1px solid rgba(0, 121, 193, 0.5);
+  border-radius : 2px;
+  box-shadow    : 1px 1px 1px rgba(25, 86, 123, 0.95), 0px 0px 1px rgba(29, 101, 144, 0.95);
+}
+
+input[type=range]::-ms-fill-upper {
+  background    : #0079c1;
+  border        : 1px solid rgba(0, 121, 193, 0.5);
+  border-radius : 2px;
+  box-shadow    : 1px 1px 1px rgba(25, 86, 123, 0.95), 0px 0px 1px rgba(29, 101, 144, 0.95);
+}
+
+input[type=range]::-ms-thumb {
+  box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border        : 1px solid #0079c1;
+  height        : 24px;
+  width         : 12px;
+  border-radius : 3px;
+  background    : #ffffff;
+  cursor        : pointer;
+  height        : 7px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background : #0079c1;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background : #0089db;
+}
+
+#map-view-node {
+  height : 700px;
+}
